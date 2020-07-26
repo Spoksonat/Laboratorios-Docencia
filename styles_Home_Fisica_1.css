@@ -15,9 +15,10 @@ body{
     display: flex;
     justify-content: space-between;
     margin-right: 6%;
+    width: 23%;
 }
 .Titulo{
-    margin-left: 3%;
+    margin-left: 5%;
 }
 .Botones{
     color: #E2E2E2;
