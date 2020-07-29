@@ -1,6 +1,11 @@
 @charset "utf-8";
 body{
     background-color: #000000AD;
+    overflow: hidden;
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: MoverIzquierda;
 }
 .Barra_de_Navegacion{
     display: flex;
@@ -41,3 +46,18 @@ body{
     border: 0;
     width: 77%;
 }
+
+@keyframes MoverIzquierda {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+

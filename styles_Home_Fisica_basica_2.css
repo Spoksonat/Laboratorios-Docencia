@@ -1,6 +1,11 @@
 @charset "utf-8";
 body{
-    background-color: #000000AD;    
+    background-color: #000000AD; 
+    overflow: hidden;
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
+    animation-name: MoverDerecha;
 }
 .Barra_de_Navegacion{
     display: flex;
@@ -40,4 +45,16 @@ body{
 }
 .Imagen_entrada{
     width: 73%;
+}
+
+@keyframes MoverDerecha {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 }

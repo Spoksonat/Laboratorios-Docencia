@@ -1,6 +1,7 @@
 @charset "utf-8";
 body{
     background-color: #1A1919;
+    overflow: hidden;
 }
 .Contenedor_Logo{
     background-color: #1A1919;
