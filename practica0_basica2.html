@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Práctica 0</title>
+<link href="Styles_practica0_basica2.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    
+    <svg viewBox="-128 154.3 542.2 302" class="Fondo">
+        <path class="Figura_Fondo" d="M120,154.3c0,0,1.1,49.7,82.7,72.1s41.7,112,41.7,112S221.1,416.9,313,424s101.1,32.3,101.1,32.3
+	v-302H120z"/>
+    </svg>
+    
+    <div class="Nav-Bar">
+    
+        <div class="Contenedor_Logo">
+            <img src="Img/Logo_Andes_2.svg" alt="logo" class="Logo">
+            <a class="Logo_Nombre">Lab. Física Básica 2</a>
+        </div>
+        
+        <div class="Contenedor_botones">
+            <a href="Home_Fisica_basica_2.html" class="Boton">Inicio</a>
+            <a href="about:blank" class="Boton">Recursos</a>
+        </div>             
+    </div>   
+    
+    <div class="Contenedor_Cabecera">
+        <div class="Contenedor_Titulo">
+            <p class="Titulo">Análisis de error, regresión y ajustes no lineales</p>
+            <p class="Descripcion_Titulo">
+                El objetivo de este laboratorio es el de analizar la propagación de errores dadas variables con medidas e incertidumbres. Así mismo también se prentenden realizar regresiones lineales y linealización por medio de las herramientas de Excel junto con una tabulación y gráficas de los datos usados.    
+            </p>
+        </div>
+        
+        <img src="Img/Diana.svg" alt="Seccion_2_GAMOS" class="Imagen_Cabecera">
+        
+    </div>
+    
+    <div class="Contenedor_Contenido">
+        <div class="Contenido">
+            <p class="Titulo_2">Estimación del Error</p>
+            <p class="Descripcion_2"> Desde el primer momento en el que la palabra <i>medida</i> aparece en el contexto de la física, esta viene de la mano con el concepto de <i>error</i>. Desde el primer momento en el que usamos un instrumento de medición común como lo pueden ser una regla, un cronómetro o un termómetro, el error asociado a estos instrumentos de medición aparece. Este error se asocia con la escala a través de la cuál se definen las medidas en dicho instrumento. Un ejemplo que puede ilustrar la aparición del error en una medida cotidiana se puede observar en la siguiente ilustración: </p>
+            
+            <img src="Img/Medida_gusanito.svg" alt="Longitud gusanito de goma" style="width:80%">
+            <p class="Descripcion_2">Figura 1: Medida de la longitud de una gusanito de goma.</p>
+            
+            <p class="Descripcion_2">En este caso en partícular podemos ver que el gusanito de goma tiene una longitud aproximada de \(3.2\,cm\). Sin embargo la cabeza del gusanito llega hasta un poco más allá de la marca de los \(3.2\,cm\). Esto implica que no podemos tener una certeza completa en la medida del gusanito, pero si podemos establecer un rango a través del cual se puede encontrar la longitud exacta. Este rango se puede establecer a través del error en la medida. Sabiendo que la mínima unidad que se puede medir con precisión en la regla es \(1\,mm = 0.1\,cm\) entonces la medida de la longitud \(l\) del gusanito se puede expresar como $$l = (3.20 \pm 0.05)\,cm,$$ donde el \(0.05\,cm = (0.1/2)cm\) hace referencia a que el error en una sola medida tomada generalmente con un instrumento análogo se toma como la mitad de la mínima unidad que es posible medir. Es importante hacer énfasis en que se agregó un cero en los decimales de \(l\), ya que la medida debe tener el mísmo número de posiciones decimales que el error.</p> 
+            <p class="Descripcion_2">Otro ejemplo que es posible de plantear es la medición del grosor de un libro, ubicado en estante horizontal con 10 libros iguales. Si una persona mide el largo del estante con una regla similar a la de la <i>Figura 1</i> obtiene una medida de, por ejemplo, de \(29.3\,cm\). Esto implica que la longitud \(L\) del estante es $$L = (29.30\,\pm 0.05)cm. $$ Pero ya que queremos encontrar el grosor \(l\) de cada libro, entonces este se puede encontrar de la siguiente manera: $$l = \frac{L}{10} = (2.930\pm 0.005)cm. $$ Se observa cómo midiendo el grosor de 10 libros (que en esencia es la longitud del estante), puedo disminuir el error en la medida del grosor de uno solo.</p>
+        </div>
+        
+        <div class="Contenido">
+            <p class="Titulo_2 Izquierda">Errores en múltiples mediciones</p>
+            <p class="Descripcion_2">También se puede reducir el error tomando multiples medidas. Si nos devolvemos al caso del libro, supongamos que medimos 10 veces distitas el grosor de un solo libro y obtuvimos los siguientes datos: $$2.9\,cm,\, 2.9\,cm,\, 2.9\,cm,\, 2.9\,cm,\, 2.8\,cm,\, 2.9\,cm, 2.9\,cm,\, 2.9\,cm,\, 2.8\,cm,\, 2.9\,cm.$$ En el caso en el que tenemos múltiples datos, el mejor estimado de la medida es el <b>promedio</b>. Si \(l_i\) son las medidas de los grosores puestos anteriormente (con \(i=1,2,3,...,10\)), entonces el promedio \(\bar{l}\) se define como $$\bar{l} = \sum_{i=1}^{N}l_i,$$ donde \(N\) es el número de datos tomados. El error \(\delta_l\) asociado a esta medida se puede estimar a través de la expresión presentada a continuación: $$\delta_l = \frac{\sigma}{\sqrt{N}},$$ donde \(\sigma\) es conocida como la <b>desviación estandar</b> del conjunto de datos, definida como $$\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}(l_i - \bar{l})^2}.$$ La desviación estandar permite darnos una idea de qué tan alejados están los datos del promedio, de forma que nos brinda una idea de lo que en principio representa el error. Con esto en mente, la medida completa del grosor \(l\) del libro será $$l = \bar{l} \pm \delta_l. $$ En el ejemplo planteado, se puede encontrar que \(\bar{l} = 2.88\,cm\) y \(\sigma = 0.0421637\), de forma que la medida total del grosor del libro es $$l = (2.90600000000 \pm 0.01333333266)cm.$$ Si aumentáramos el número de mediciones \(N\) tanto la desviación estandar como el error disminuirían, de forma que a través de la toma de una cantidad considerable de datos podemos tener una medida más exacta.</p>
+        </div>
+        
+        <div class="Contenido">
+            <p class="Titulo_2">Errores Aleatorios y Sistemáticos. Precisión y Exactitud</p>
+            <p class="Descripcion_2"> Anteriormente se usaron expresiones como <i>medida exacta</i> y <i>precisión</i> sin tener presente su significado. Sin embargo estas tienen un papel importante al entender la manera en la que nuestros datos se comportan. Cuando queremos obtener cierta medida, lo ideal es que sea tanto precisa como exacta, pero dependiendo de factores externos o errores humanos en la medición esto puede cambiar. También debido a estos mismos motivos los errores pueden ser de distinto tipo, ya sean aleatorios o sistemáticos. Un ejemplo que podría mostrar de forma un poco más clara estos conceptos es el de una persona lanzando dardos a un blanco fijo, como se muestra a continuación: </p>
+            
+            <img src="Img/Diana2.svg" alt="Diana" style="width:65%">
+            
+            <p class="Descripcion_2">Figura 2. Representación de Exactitud, Precisión, Error Aleatorio y Error Sistemático. Las direcciones de las flechas indican la dirección en la cual aumentan los valores de la variables asociadas a su respectivo eje.</p>
+            
+            <p class="Descripcion_2"> En la imágen se puede observar cómo en los dos blancos superiores los dardos se encuentran en posiciones muy alejadas entre si, mientras que los dos inferiores pasa exactamente lo contrario. Esta dispersión de los dardos es medida por la precisión de las posiciones, de forma que un conjunto de dardos muy dispersos entre si muestra mucha precisión, mientras que un conjunto menos disperso muestra lo opuesto. Cabe resaltar que la precisión no depende de que la persona clave los dados lo más cerca posible al centro, sino de qué tan dispersos están estos. Por otra parte, la exactitud si depende de la tendencia de que los datos estén cerca del valor ideal. En este caso en particular depende de qué tanto tienden las posiciones de los dardos a estar cerca del centro. En el caso de los blancos a la derecha hay poca exactitud debido a que las posiciones de los dardos no se encuentran alrededor del centro. Lo contrario ocurre con los blancos a la izquierda. </p>
+            
+            <p class="Descripcion_2"> En cuanto a los errores, el ejemplo más claro de error aleatorio se encuentra en el blanco superior-izquierdo. En este blanco solo dos dardos están en el centro, mientras que los demás se distribuyen aleatoriamente por todo el tablero. Generalmente cuando se habla de errores aleatorios se trata de eventos en los cuales podemos tanto subestimar como sobreestimar una medida. Un ejemplo en el que este tipo de errores aparece puede ser la medición de un objeto con una regla. Debido a que la regla tiene asociada cierta incertidumbre, a veces podemos obtener una medida más grande que la correcta, como también a veces podemos obtener una más pequeña. Respecto al error sistemático el ejemplo más claro es el blanco inferior derecho. En este todos los dardos cayeron alejados del centro en una región muy concreta del tablero, al contrario que lo que ocurre con el blanco superior izquierdo. En general los errores sistemáticos se presentan cuando solo sobreestimamos una medida o solo la subestimamos, pero nunca ambas. Un ejemplo es la medición del tiempo con un cronómetro. Debido a que, como humanos, tardamos un poco en parar el cronómetro para obtener el tiempo transcurrido de un evento, siempre obtendremos un tiempo un poco superior al verdadero, de forma que estaremos sobreestimando cada medida. </p>
+        </div>
+    </div>
+    
+    
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>
