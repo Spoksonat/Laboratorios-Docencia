@@ -52,3 +52,26 @@ body{
 .btn{
     width: 19%;
 }
+
+
+@media screen and (orientation:landscape) and (min-width:1407px) and (max-width:1660px){
+    .Titulo{
+    font-size: 88%;
+    }
+    
+    .Texto_seleccion{
+    font-size: 68%;
+    }
+    
+}
+
+@media screen and (orientation:landscape) and (min-width:1000px) and (max-width:1407px){
+    .Titulo{
+    font-size: 88%;
+    }
+    
+    .Texto_seleccion{
+    font-size: 68%;
+    }
+    
+}
