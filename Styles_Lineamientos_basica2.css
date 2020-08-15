@@ -2,7 +2,7 @@
 
 body{
     width: 100%;
-    height: 300vh;
+    /*height: 500vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -106,4 +106,21 @@ body{
 .link:hover{
 	background: #c266ff;
 	color: #000000;
+}
+.Tabla{
+	width: 95%;
+}
+.Tabla .Color_2{
+	background: #adabd6;
+	text-align: center;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
+}
+.Tabla .Color_1{
+	background: #cdcce6;
+	text-align: center;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	padding-top: 0.5vh;
+	padding-bottom: 0.5vh;
 }
