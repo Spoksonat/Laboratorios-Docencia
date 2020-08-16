@@ -2,11 +2,11 @@
 
 body{
     width: 100%;
-    height: 100vh;
+    /*height: 100vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .Nav-Bar{
     width: 90%;
@@ -59,7 +59,7 @@ body{
 .Figura{
 	fill: #adabd6;
 }
-.Contenedor_Contenido{
+.Contenedor_Cabecera{
 	width: 85%;
 	height: 90vh;
 	display: flex;
@@ -75,6 +75,11 @@ body{
 .Texto{
     font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
     text-align: justify;	
+}
+.Titulo_2{
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
 }
 .Tabla{
 	width: 45%;
@@ -95,6 +100,17 @@ body{
 }
 .Descripcion{
 	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.frame{
+	width: 80%;
+	height: 80vh;
+}
+.Contenedor_Contenido{
+	width: 80%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
