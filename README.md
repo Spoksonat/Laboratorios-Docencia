@@ -1,7 +1,7 @@
 # Página de internet de cursos de Laboratorio de Física 1 y Física Básica 2 en Uniandes
 
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/Spoksonat/Laboratorios-Docencia/blob/master/README.md)
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Spoksonat/Laboratorios-Docencia/master/README.en.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Spoksonat/Laboratorios-Docencia/blob/master/README.en.md)
 
 En este repositorio se encuentra el código hecho para crear la página de internet de los cursos de laboratorio que impartí en el
 segundo semestre de 2020.
