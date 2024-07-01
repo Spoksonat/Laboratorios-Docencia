@@ -5,7 +5,7 @@ In this repository, you will find the code made to create the website for the la
 ## Table of Contents
 
 [![es](https://img.shields.io/badge/lang-es-yellow.svg)](https://github.com/Spoksonat/Laboratorios-Docencia/blob/master/README.md)
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Spoksonat/Laboratorios-Docencia/master/README.en.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Spoksonat/Laboratorios-Docencia/blob/master/README.en.md)
 
 - [About the Project](#about-the-project)
 - [Usage](#usage)
